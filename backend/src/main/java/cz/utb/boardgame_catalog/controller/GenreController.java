@@ -20,16 +20,33 @@ public class GenreController {
         this.genreRepository = genreRepository;
     }
 
+    /**
+     * Get all genres from the database.
+     *
+     * @return List of all genres.
+     */
     @GetMapping("/api/genres")
     public List<Genre> getGenres() {
         return genreRepository.findAllByOrderByNameAsc();
     }
 
+    /**
+     * Get the count of all genres in the database.
+     *
+     * @return Count of all genres.
+     */
     @GetMapping("/api/genres/count")
     public long getGenresCount() {
         return genreRepository.count();
     }
 
+    /**
+     * Get a genre by its ID.
+     *
+     * @param id The ID of the genre to retrieve.
+     * @return ResponseEntity containing the genre if found, or a 404 status if not
+     *         found.
+     */
     @GetMapping("/api/genres/{id}")
     public ResponseEntity<?> getGenreById(@PathVariable Integer id) {
         Optional<Genre> genre = genreRepository.findGenreById(id);
