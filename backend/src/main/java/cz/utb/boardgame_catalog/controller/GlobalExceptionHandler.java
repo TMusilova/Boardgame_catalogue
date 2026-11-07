@@ -21,4 +21,15 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(400)
                 .body("Invalid parameter, expected: " + expectedType + ", but got: " + actualValue);
     }
+
+    /**
+     * Handle all other exceptions
+     * 
+     * @param ex the exception
+     * @return a ResponseEntity with a 500 status code and an error message
+     */
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<String> handleGeneralException(Exception ex) {
+        return ResponseEntity.status(500).body("Internal server error.");
+    }
 }
