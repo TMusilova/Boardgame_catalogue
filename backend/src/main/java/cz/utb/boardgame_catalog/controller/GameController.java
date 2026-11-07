@@ -9,6 +9,7 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.TextCriteria;
 import org.springframework.data.mongodb.core.query.TextQuery;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -188,5 +189,23 @@ public class GameController {
 
         gameRepository.save(game);
         return ResponseEntity.status(200).body("Game edited successfully.");
+    }
+
+    /**
+     * Delete a game by its ID.
+     *
+     * @param id The ID of the game to delete.
+     * @return ResponseEntity indicating the result of the deletion operation.
+     */
+    @DeleteMapping("/api/games/{id}")
+    public ResponseEntity<?> deleteGame(@PathVariable Integer id){
+        // check the game exists
+        Game existing = gameRepository.findGameById(id).orElse(null);
+        if (existing == null) {
+            return ResponseEntity.status(404).body("Game not found.");
+        }
+
+        gameRepository.deleteById(existing.get_id());
+        return ResponseEntity.status(200).body("Game deleted successfully.");
     }
 }
