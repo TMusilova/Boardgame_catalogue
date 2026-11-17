@@ -6,9 +6,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection="games")
 public class Game {
     @Id 
-    private String _id;
+    private String _id; // MongoDB document ID
 
-    private Integer id;
+    private Integer id; // Custom game ID
     private String name;
     private Integer price;
     private String publisher;
