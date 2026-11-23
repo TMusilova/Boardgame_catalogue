@@ -160,6 +160,13 @@ public class GameController {
         return ResponseEntity.status(201).body("Game created successfully.");
     }
 
+    /**
+     * Edit an existing game in the database.
+     *
+     * @param id   The ID of the game to edit.
+     * @param game The updated game object.
+     * @return ResponseEntity indicating the result of the edit operation.
+     */
     @PutMapping("/api/games/{id}")
     public ResponseEntity<?> editGame(@PathVariable Integer id, @RequestBody Game game) {
         // check id
