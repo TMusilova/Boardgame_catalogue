@@ -110,7 +110,7 @@ function Details({ isNew = false }) {
           </div>
         )}
 
-        <Row className="mb-2 align-items-center">
+        <Row className="mb-1 align-items-center">
           <Col sm="3">
             <label className="form-label mt-3">ID:</label>
           </Col>
@@ -132,7 +132,7 @@ function Details({ isNew = false }) {
           </Col>
         </Row>
 
-        <Row className="mb-2 align-items-center">
+        <Row className="mb-1 align-items-center">
           <Col sm="3">
             <label className="form-label mb-0">Title:</label>
           </Col>
@@ -151,25 +151,7 @@ function Details({ isNew = false }) {
           </Col>
         </Row>
 
-        <Row className="mb-2 align-items-center">
-          <Col sm="3">
-            <label className="form-label mt-3">Price:</label>
-          </Col>
-          <Col sm="9">
-            <input
-              type="number"
-              className="form-control"
-              value={game.price ?? ""}
-              min={0}
-              onChange={event => setGame({
-                ...game,
-                price: event.target.value === "" ? null : Number(event.target.value)
-              })}
-            />
-          </Col>
-        </Row>
-
-        <Row className="mb-2 align-items-center">
+        <Row className="mb-1 align-items-center">
           <Col sm="3">
             <label className="form-label mt-3">Publisher:</label>
           </Col>
@@ -185,11 +167,11 @@ function Details({ isNew = false }) {
           </Col>
         </Row>
 
-        <Row className="mb-2 align-items-center">
-          <Col sm="3">
+        <Row className="mb-1 align-items-center">
+          <Col>
             <label className="form-label mt-3">Publication year:</label>
           </Col>
-          <Col sm="9">
+          <Col>
             <input
               type="number"
               className="form-control"
@@ -203,28 +185,45 @@ function Details({ isNew = false }) {
               })}
             />
           </Col>
-        </Row>
 
-        <Row className="mb-2 align-items-center">
-          <Col sm="3">
-            <label className="form-label mt-3">Description:</label>
+          <Col>
+            <label className="form-label d-block text-end mt-3 me-3">Price:</label>
           </Col>
-          <Col sm="9">
+          <Col>
             <input
+              type="number"
               className="form-control"
-              value={game.description}
-              required
-              minLength={3}
-              maxLength={5000}
+              value={game.price ?? ""}
+              min={0}
               onChange={event => setGame({
                 ...game,
-                description: event.target.value
+                price: event.target.value === "" ? null : Number(event.target.value)
               })}
             />
           </Col>
         </Row>
 
-        <Row className="mb-2 align-items-center">
+        <Row className="mb-1 align-items-center">
+          <Col sm="3">
+            <label className="form-label mt-3">Description:</label>
+          </Col>
+          <Col sm="9">
+            <textarea
+              className="form-control"
+              style={{ fieldSizing: "content" }}
+              value={game.description}
+              required
+              minLength={3}
+              maxLength={5000}
+              onChange={(event) => setGame({
+                ...game,
+                description: event.target.value,
+              })}
+            />
+          </Col>
+        </Row>
+
+        <Row className="mb-1 align-items-center">
           <Col sm="3">
             <label className="form-label mt-3">Genre:</label>
           </Col>
@@ -245,6 +244,28 @@ function Details({ isNew = false }) {
                 </option>
               ))}
             </select>
+          </Col>
+        </Row>
+
+        <Row className="mb-1 align-items-center">
+          <Col sm="3">
+            <label className="form-label mt-2">Genre ID:</label>
+          </Col>
+          <Col sm="9">
+            <p className="form-label m-0" style={{ paddingLeft: "0.75rem" }}>
+              {genres.find(genre => genre.id === game.genre_id)?.id}
+            </p>
+          </Col>
+        </Row>
+
+        <Row className="mb-1 align-items-center">
+          <Col sm="3">
+            <label className="form-label mt-2">Genre description:</label>
+          </Col>
+          <Col sm="9">
+            <p className="form-label m-0" style={{ paddingLeft: "0.75rem" }}>
+              {genres.find(genre => genre.id === game.genre_id)?.description}
+            </p>
           </Col>
         </Row>
 
