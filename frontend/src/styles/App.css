@@ -2,6 +2,11 @@
 .container {
   padding-top: 2rem;
   padding-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+
+.container-form {
+  margin: 2rem 7rem 0 7rem;
 }
 
 /* Search */
@@ -39,4 +44,29 @@
   background-color: #304767;
   color: white;
   transform: translateY(-2px);
+}
+
+.new-game-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+.game-form {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.game-form label {
+  font-weight: 600;
+  color: #263852;
+}
+
+.game-form input,
+.game-form select {
+  max-width: 100%;
 }

@@ -35,6 +35,7 @@ function Home() {
             .catch(error => console.error('Error searching games:', error))
     }
 
+    // reset search and fetch all games
     function clearSearch() {
         setQuery('')
         fetch('/api/games')
@@ -84,17 +85,23 @@ function Home() {
                             <th>Genre</th>
                             <th>Publisher</th>
                             <th>Year</th>
+                            <th>Description</th>
                             <th>Price</th>
                         </tr>
                     </thead>
                     <tbody>
                         {games.length > 0 ? (
                             games.map(game => (
-                                <tr key={game.id}>
+                                <tr key={game.id} onClick={() => navigate(`/games/${game.id}`)}>
                                     <td>{game.name}</td>
                                     <td>{genres.find(genre => genre.id === game.genre_id)?.name}</td>
                                     <td>{game.publisher}</td>
                                     <td>{game.year}</td>
+                                    <td title={game.description}>
+                                        {game.description?.length > 50
+                                            ? `${game.description.substring(0, 50)}…`
+                                            : game.description}
+                                    </td>
                                     <td>{game.price}</td>
                                 </tr>
                             ))
@@ -106,6 +113,13 @@ function Home() {
                     </tbody>
                 </table>
             </div>
+
+            <button
+                className="btn buttons new-game-button"
+                onClick={() => navigate('/games/new')}
+            >
+                + Add New Game
+            </button>
         </main>
     )
 }
