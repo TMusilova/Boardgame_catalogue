@@ -1,0 +1,1 @@
+db.boardgames.createIndex({ name: "text", description: "text" })

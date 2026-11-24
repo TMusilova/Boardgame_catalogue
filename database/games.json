@@ -1,0 +1,108 @@
+[
+    {
+        "_id": {
+            "$oid": "6ae21a8068fe30f04e543777"
+        },
+        "id": 1,
+        "name": "Catan",
+        "price": 899,
+        "publisher": "Catan Studio",
+        "year": 1995,
+        "description": "Players collect and trade resources to build settlements, cities and roads.",
+        "genre_id": 1
+    },
+    {
+        "_id": {
+            "$oid": "6ae21ad868fe30f04e543778"
+        },
+        "id": 2,
+        "name": "Dixit",
+        "price": 749,
+        "publisher": "Libellud",
+        "year": 2008,
+        "description": "Players use imaginative clues to describe beautifully illustrated cards.",
+        "genre_id": 3
+    },
+    {
+        "_id": {
+            "$oid": "6ae21af168fe30f04e543779"
+        },
+        "id": 3,
+        "name": "Carcassonne",
+        "price": 699,
+        "publisher": "Z-Man Games",
+        "year": 2000,
+        "description": "Players build a medieval landscape using tiles and place followers to score points.",
+        "genre_id": 2
+    },
+    {
+        "_id": {
+            "$oid": "6ae21b1f68fe30f04e54377a"
+        },
+        "id": 4,
+        "name": "Codenames",
+        "price": 499,
+        "publisher": "Czech Games Edition",
+        "year": 2015,
+        "description": "Teams use one-word clues to identify their secret agents among word cards.",
+        "genre_id": 3
+    },
+    {
+        "_id": {
+            "$oid": "6ae21d1ed754f280e97e5954"
+        },
+        "id": 5,
+        "name": "Uno",
+        "price": 179,
+        "publisher": "Mattel",
+        "year": 1971,
+        "description": "Players take turns matching a card from their hand to the top card of the discard pile by color, number, or symbol, aiming to be the first to get rid of all their cards while shouting \"UNO!\" when down to their last one.",
+        "genre_id": 3
+    },
+    {
+        "_id": {
+            "$oid": "6ae21da1d754f280e97e5955"
+        },
+        "id": 6,
+        "name": "Pandemic",
+        "price": 999,
+        "publisher": "Z-Man Games",
+        "year": 2008,
+        "description": "Players cooperate to stop the spread of diseases and save the world.",
+        "genre_id": 4
+    },
+    {
+        "_id": {
+            "$oid": "6ae21da1d754f280e97e5956"
+        },
+        "id": 7,
+        "name": "Azul",
+        "price": 899,
+        "publisher": "Next Move Games",
+        "year": 2017,
+        "description": "Players draft colorful tiles to create patterns and score points.",
+        "genre_id": 5
+    },
+    {
+        "_id": {
+            "$oid": "6aee26c4d764a554ac5af6eb"
+        },
+        "id": 8,
+        "name": "Monopoly",
+        "price": 699,
+        "publisher": "Parker Brothers",
+        "year": 1935,
+        "description": "Players buy, trade, and develop properties to collect rent and bankrupt their opponents.",
+        "genre_id": 1
+    },
+    {
+        "_id": {
+            "$oid": "6aee26edd764a554ac5af6ec"
+        },
+        "id": 9,
+        "name": "Chess",
+        "publisher": "",
+        "description": "A classic two-player tactical strategy game played on an 8x8 checkered board with the goal of checkmating the opponent's king.",
+        "genre_id": 1
+    }
+]

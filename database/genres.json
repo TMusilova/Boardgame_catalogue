@@ -1,0 +1,42 @@
+[
+    {
+        "_id": {
+            "$oid": "6ae219f568fe30f04e543772"
+        },
+        "id": 1,
+        "name": "Strategy",
+        "description": "Games focused on planning, tactics and decision-making."
+    },
+    {
+        "_id": {
+            "$oid": "6ae219f568fe30f04e543773"
+        },
+        "id": 2,
+        "name": "Family",
+        "description": "Accessible games suitable for families and casual players."
+    },
+    {
+        "_id": {
+            "$oid": "6ae219f568fe30f04e543774"
+        },
+        "id": 3,
+        "name": "Party",
+        "description": "Social games designed for groups of players."
+    },
+    {
+        "_id": {
+            "$oid": "6ae219f568fe30f04e543775"
+        },
+        "id": 4,
+        "name": "Cooperative",
+        "description": "Players work together to achieve a shared objective."
+    },
+    {
+        "_id": {
+            "$oid": "6ae219f568fe30f04e543776"
+        },
+        "id": 5,
+        "name": "Abstract",
+        "description": "Games focused on logical thinking and strategic patterns."
+    }
+]
